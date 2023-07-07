@@ -1141,11 +1141,11 @@ Training plan SSECTION */
 }
 
 #rs-range-line::-webkit-slider-thumb {
-    background-image: url(../image/reshot-icon-ok-QBCJ4DSA8U.svg);
+    background-image: url(../image/ok.svg);
 }
 
 #rs-range-line.mid::-webkit-slider-thumb {
-    background-image: url(../image/reshot-icon-money-S6DHLMN347.svg);
+    background-image: url(../image/money.svg);
 }
 
 .rs-label {
