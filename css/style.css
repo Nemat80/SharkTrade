@@ -1137,6 +1137,7 @@ Training plan SSECTION */
 
 .rs-range::-moz-focus-outer {
     border: 0;
+    
 }
 
 #rs-range-line::-webkit-slider-thumb {
