@@ -957,6 +957,232 @@ Training plan SSECTION */
 
 /* END QUESTIONS SECTION */
 
+/* SECTION SLIDER RESULT  */
+
+.slider-result {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-content {
+    margin: 0 auto;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #22212b;
+    border-radius: 20px;
+    padding: 15px 20px;
+    gap: 20px;
+}
+
+.slider-text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.slider-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 46px;
+    font-weight: bold;
+    width: 50%;
+}
+
+.slider-subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.741);
+    font-size: 20px;
+    max-width: 50%;
+}
+
+.slider-range-content {
+    background-color: #16161a;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.range-block {
+    width: 25%;
+    height: 25vh;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    padding: 10px 15px;
+}
+
+.range-text {
+    color: #010101;
+    width: 100%;
+    font-size: 18px;
+}
+
+.range-month {
+    color: black;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.range-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 15px 15px;
+}
+
+.range-title {
+    width: 60%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.range-slider {
+    width: 50%;
+}
+
+.box-minmax {
+    margin-top: 30px;
+    width: 95%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-left: -10px;
+}
+
+.box-minmax span:first-child {
+    margin-left: 10px;
+}
+
+.rs-range {
+    margin-top: 29px;
+    width: 600px;
+    -webkit-appearance: none;
+}
+
+.rs-range:focus {
+    outline: none;
+}
+
+.rs-range::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #ffffff;
+    border-radius: 0px;
+    border: 0px solid #ffffff;
+}
+
+.rs-range::-moz-range-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #ffffff;
+    border-radius: 0px;
+    border: 0px solid #010101;
+}
+
+.rs-range::-webkit-slider-thumb {
+    box-shadow: none;
+    border: 0px solid #ffffff;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    background-position: top;
+    background-size: contain;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -20px;
+}
+
+ƒ .rs-range::-moz-range-thumb {
+    box-shadow: none;
+    border: 0px solid #ffffff;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    height: 42px;
+    width: 22px;
+    border-radius: 22px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -20px;
+}
+
+.rs-range::-moz-focus-outer {
+    border: 0;
+}
+
+#rs-range-line::-webkit-slider-thumb {
+    background-image: url(/image/reshot-icon-ok-QBCJ4DSA8U.svg);
+}
+
+#rs-range-line.mid::-webkit-slider-thumb {
+    background-image: url(/image/reshot-icon-money-S6DHLMN347.svg);
+}
+
+.rs-label {
+    position: relative;
+    transform-origin: center center;
+    display: block;
+    width: 98px;
+    height: 98px;
+    background: transparent;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 22px;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    margin-top: 20px;
+    margin-left: -30px;
+    left: attr(value);
+    color: #fff;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 36px;
+}
+
+.rs-label::after {
+    content: "$";
+    display: block;
+    font-size: 20px;
+    letter-spacing: 0.07em;
+    margin-top: -2px;
+}
+
+
+
+/* END SLIDER RESULT  */
+
 
 
 /* <!-- SECTION CALLBACK --> */
@@ -1262,9 +1488,8 @@ Training plan SSECTION */
     font-size: 18px;
     color: #7a7891;
 }
-.info-text .adress {
 
-}
+.info-text .adress {}
 
 .social {
     width: 80%;
@@ -1301,10 +1526,12 @@ Training plan SSECTION */
     color: #7a7891;
     font-weight: bold;
 }
-.all-products > li > a {
+
+.all-products>li>a {
     color: #7a7891 !important;
 }
-.all-products > li > a:hover {
+
+.all-products>li>a:hover {
     color: rgb(44, 44, 193) !important;
 }
 
@@ -1317,12 +1544,14 @@ Training plan SSECTION */
     height: 50vh;
     padding: 0px 10px;
 }
+
 .page-title {
     width: 100%;
     font-size: 22px;
     text-align: start;
     margin-left: 30px;
 }
+
 .page-content {
     width: 100%;
     height: 30vh;
@@ -1331,10 +1560,13 @@ Training plan SSECTION */
     justify-content: space-around;
     flex-direction: column;
 }
+
 .page-item {}
+
 .page-anchor-link {
     color: #7a7891 !important;
 }
+
 .page-anchor-link:hover {
     color: rgb(44, 44, 193) !important;
 }
