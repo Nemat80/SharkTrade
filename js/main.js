@@ -55,7 +55,7 @@ rangeSlider.addEventListener("input", showSliderValue, false);
 function showSliderValue() {
   rangeBullet.innerHTML = rangeSlider.value;
   let bulletPosition = (rangeSlider.value / rangeSlider.max);
-  rangeBullet.style.left = (bulletPosition * 560) + "px";
+  rangeBullet.style.left = (bulletPosition * 620) + "px";
 }
 
 
