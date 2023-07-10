@@ -305,7 +305,10 @@ i {
 
 /* SECTION NAVIGATION */
 .nav {
-    padding: 100px 0px 0px 120px;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 20px;
 }
 
 .nav-content {
@@ -316,11 +319,12 @@ i {
 
 .nav-left {
     z-index: 10;
-    width: 50%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    gap: 30px;
 }
 
 .nav-info {
@@ -349,13 +353,15 @@ i {
 }
 
 .nav-title {
-    font-size: 110px;
+    width: 100%;
+    font-size: 76px;
     font-weight: bold;
 }
 
 .nav-description {
-    font-size: 16px;
-    color: rgba(177, 248, 69, 0.903);
+    font-size: 22px;
+    font-weight: 400;
+    color: lightgray;
 }
 
 .nav-btn-group {
@@ -369,6 +375,7 @@ i {
 .nav-btn {
     background-color: #f3f230;
     color: black;
+    font-weight: bold;
     width: 45%;
     height: 60px;
 }
@@ -378,8 +385,12 @@ i {
 }
 
 .nav-sub-btn {
-    border: 1px solid gainsboro;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
     color: whitesmoke;
+    background-color: #54ef6c;
     width: 45%;
     height: 60px;
 }
@@ -504,13 +515,15 @@ i {
 
 /* END SECTION NAVIGATION */
 
+
 /* MAIN SECTION */
+
 
 /* SECTION auditorium */
 
 .auditorium {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -533,14 +546,15 @@ i {
 }
 
 .auditorium-box {
+    flex: 0 0 46%;
     z-index: 5;
     width: 45%;
     height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
-    gap: 20px;
+    padding: 25px 20px;
+    gap: 5px;
     border-radius: 15px;
     background-color: #22212b;
     border: 0.5px solid yellowgreen;
@@ -550,11 +564,11 @@ i {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
-    padding: 5px;
-    border-radius: 50%;
-    background-color: yellowgreen;
+    min-width: 10%;
+    max-width: 50px;
+    min-height: 50px;
+    border-radius: 100%;
+    background-color: rgb(170, 255, 0);
     color: #181721;
 }
 
@@ -648,26 +662,38 @@ i {
 }
 
 .tab-btn-title {
+    width: 100%;
+    text-align: center;
     color: white;
     font-size: 22px;
     font-weight: bold;
 }
 
 .tab-btn-description {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
     padding-top: 10px;
 }
 
 .tab-btn-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 14px;
     color: #181721;
-    margin-right: 20px;
     border-radius: 50%;
+    width: 10%;
+    height: 30px;
     padding: 10px;
     background-color: #f3f230;
 }
 
 .tab-btn-subtitle {
-    font-size: 14px;
+    width: 90%;
+    font-size: 20px;
     color: #5f5f63;
 }
 
@@ -688,9 +714,12 @@ i {
 /* SECTION 
 Training plan */
 .training {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 100px;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .training-title {
@@ -724,12 +753,10 @@ Training plan */
     background-color: #22212b;
     border-radius: 20px !important;
     margin: 0px 0px 10px 0px;
-    width: 80%;
+    width: 50%;
     min-height: 60px;
     cursor: pointer;
     font-size: 20px;
-
-
 }
 
 .accordion-item::before {
@@ -777,16 +804,69 @@ Training plan */
 }
 
 .accordion-content {
+    width: 100%;
     opacity: 0;
     padding: 10px;
     transition: opacity 0.3s ease, max-height 0.5s ease;
     overflow: hidden;
-    max-height: 0;
+    max-height: 0px;
 }
 
 .accordion-content.active {
     opacity: 1;
-    max-height: 500px;
+    min-height: 0vh;
+    max-height: 77.5vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+
+.content-lessons-list {
+    width: 100%;
+}
+
+.lessons-item {
+    margin-left: -20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+    border-bottom: 1px solid lightgrey;
+    width: 100%;
+}
+.lessons-icon {
+    text-align: end;
+    display: inline-block;
+    width: 5%;
+    color: gold;
+}
+
+.lessons-count {
+    font-size: 20px;
+    text-align: start;
+    display: inline-block;
+    width: 15%;
+}
+
+.lessons-info {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    border-left: 1px solid lightgrey;
+    padding: 10px;
+    font-size: 16px;
+
+}
+
+.lessons-info-description::before {
+    content: "-";
+    display:inline-block;
+    width: 0.5em;
+}
+.lessons-info-description {
+    color: lightgray;
 }
 
 .training-btn {
@@ -810,8 +890,8 @@ Training plan SSECTION */
 
 .author {
     width: 100%;
-    height: 100vh;
-    margin-top: -50px;
+    min-height: 100vh;
+    margin-top: 100px;
 }
 
 .author-container {
@@ -921,7 +1001,7 @@ Training plan SSECTION */
 .result-progress {
     font-size: 28px;
     font-weight: bold;
-    color: yellowgreen;
+    color: rgb(170, 255, 0);
 }
 
 .result-description {
@@ -962,6 +1042,7 @@ Training plan SSECTION */
     min-height: 100vh;
     width: 100%;
 }
+
 .questions-accordion {
     display: flex;
     align-items: center;
@@ -1520,7 +1601,7 @@ Training plan SSECTION */
     border-right: 1px solid snow;
     padding: 0px 20px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     justify-content: flex-start;
 }
@@ -1528,13 +1609,13 @@ Training plan SSECTION */
 .product-title {
     width: 100%;
     font-size: 22px;
-    text-align: end;
+    text-align: start;
 }
 
 .all-products {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: space-around;
     width: 100%;
     height: 30vh;
