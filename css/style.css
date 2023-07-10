@@ -564,7 +564,7 @@ i {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 10%;
+    min-width: 50px;
     max-width: 50px;
     min-height: 50px;
     border-radius: 100%;
@@ -573,11 +573,11 @@ i {
 }
 
 .auditorium-role {
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .auditorium-description {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .last-box {
